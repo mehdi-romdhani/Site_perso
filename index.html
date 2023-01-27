@@ -1,13 +1,383 @@
+<!-- PortFolie/SitePerso
+Mehdi Romdhani 2023
+V1.0 -->
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./dist/style.css">
-    <title>Document</title>
-</head>
-<body>
-    <h1 class="bg-red-200">Tailwind setup </h1>
-</body>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <!-- script config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              bgmob: "url('./assets/bg_mob1.jpg')",
+              go: "url('./assets/moivieux.jpg')",
+              qui: "url('./assets/quisui.jpg')",
+              para: "url('./assets/paralaxe.jpg')",
+              par: "url('./assets/par.jpg')",
+              pa: "url('./assets/paralaa.jpg')",
+              ber: "url('./assets/ber.jpg')",
+              pres: "url('./assets/pres.jpg')",
+            },
+            colors: {
+              cust: "#3B341F",
+            },
+            borderWitdh: {
+              6: "6px",
+            },
+            fontSize: {
+              sm: ["14px", "20px"],
+              base: ["16px", "24px"],
+              lg: ["20px", "28px"],
+              xl: ["24px", "32px"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- script css -->
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <!-- TITRE PAGE  -->
+    <title>Mehdi_Romdhani</title>
+  </head>
+
+  <body class="antialised" id="top">
+    <header class="bg-cust z-50 fixed top-0 w-full shadow">
+      <nav
+        id="main-nav"
+        class="bg-cust max-w-5xl mx-auto font-mono p-6 flex items-center justify-between"
+      >
+        <a href="#" class="flex">
+         
+          <ion-icon
+            name="code-slash-sharp"
+            aria-label="page d'accueil"
+            aria-hidden="true"
+            class="hidden md:w-7 md:h-10 md:inline md:mr-4"
+          ></ion-icon>
+          
+          <button
+            aria-label="toggle button"
+            aria-expanded="false"
+            id="menu-btn"
+            class="cursor-pointer w-7 md:hidden"
+          >
+          <img src="./assets/img/Hamburger_icon.svg.png" alt="" />
+        </button>
+        </a>
+        <ul
+          id="toggled-menu"
+          class="max-sm:bg-cust w-full absolute top-full left-0 -translate-y-full -z-10 text-white border-b border-gray-200 flex flex-col items-center md:static md:z-10 md:w-min md:transform-none md:border-none md:flex-row"
+        >
+          <li class="py-4 md:py-0 md:mr-6">
+            <a
+              href="#pro"
+              class="text-sm uppercase font-mono w-full hover:text-amber-700"
+              >Projets</a
+            >
+          </li>
+          <li class="py-4 md:py-0 md:mr-6">
+            <a
+              href="#con"
+              class="text-sm uppercase font-mono w-full hover:text-amber-800"
+              >Contact</a
+            >
+          </li>
+          <li class="py-4 md:py-0 md:mr-6">
+            <a
+              href="#foot"
+              class="text-sm uppercase font-mono w-full"
+              >V.1</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Premiere section -->
+    <section
+      class="min-h-screen flex flex-col justify-center w-full pt-5 bg-black"
+    >
+      <h1
+        class="font-mono pl-5 text-white lg:text-9xl md:text-8xl max-sm:text-6xl sm:text-6xl"
+      >
+        WELCOME.
+      </h1>
+      <h2
+        class="font-mono pl-5 text-white lg:text-7xl md:text-3.5xl max-sm:text-3xl sm:text-5xl"
+      >
+        PortFolio_
+      </h2>
+      <div class="flex flex-row pl-5 md:pt-5 max-sm:pt-5 sm:pt-5">
+       <a href="https://www.linkedin.com/in/mehdi-romdhani/" target="_blank" class="cursor-pointer hover:text-white"><ion-icon
+          name="logo-linkedin"
+          class="fill-cust pr-5 text-4xl"
+          viewBox="0 0 24 24"
+        ></ion-icon></a> 
+        <a href="https://github.com/mehdi-romdhani" target="_blank" class="cursor-pointer hover:text-white"> <ion-icon name="logo-github" class="fill-cust text-4xl"></ion-icon></a>
+       
+      </div>
+
+      <div class="flex flex-col justify-end md:flex-col w-full">
+        <h2
+          class="text-white font-mono pl-5 max-sm:text-4xl max-sm:pt-5 sm:text-4xl sm:pt-5 md:text-4xl md:pl-5 md:pt-5 lg:pt-3 text-white font-mono lg:text-5xl lg:pt-5"
+        >
+          MEHDI ROMDHANI
+        </h2>
+        <!-- <p class="text-white font-mono pl-5 sm:pl-5 md:pt-2 md:pl-5">
+          Etudiant en 1er année à la Plateforme_ 
+        </p> -->
+      
+
+        <p class="text-white font-mono pl-5 md:pt-2 sm:pl-5 md:pl-5">
+          Cursus : Developpement web
+        </p>
+        <i class="text-white font-mono pl-5 md:pt-2 sm:pl-5 md:pl-5"
+          >Front-End & Back-End.</i
+        >
+      </div>
+      <p class="text-white font-mono pl-5 md:pt-2 sm:pl-5 max-sm:text-sm max-sm:pt-2 md:pl-5">
+        À la recherche d'une alternance pour Mars 2023 ( duréé 6 mois )
+      </p>
+      
+    </section>
+
+    <div class="flex flex-col justify-end md:flex-row bg-cust w-full">
+      <h2
+        class="pr-5 pl-5 max-sm:text-3xl max-sm:pt-2 max-sm:pl-5 sm:text-3xl md:text-4xl lg:text-6xl text-white font-mono lg:pt-2"
+      >
+        MES PROJETS_
+      </h2>
+    </div>
+
+    <!-- Troisieme section -->
+    <section
+      class="flex justify-center items-center min-h-screen md:mt-2 sm:mt-2"
+    >
+      <!-- Div parent -->
+      <div class="bg-gray-50 lg:pt-20 pb-28 px-8 md:pt-5 sm:pt-5">
+        <!-- Cette div englobe les cards du projets : grid -->
+        <div
+          class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 border-3 border-black"
+        >
+          <!-- Cette div represente une card  CARD1-->
+          <div class="rounded-md shadow-md lg:col-span-2 bg-black">
+            <img
+              src="./assets/img/p1.jpg"
+              class="h-80 w-full object-cover"
+              alt="projet1"
+            />
+            <div class="p-10">
+              <h4 class="font-mono text-white text-2xl">Fan_Site</h4>
+              <p class="pt-4 text-white">
+                Construction d'une interface pour un Fan_site <br />
+                Langages utilisé : HTML / CSS
+              </p>
+
+              <a
+                href="#"
+                class="inline-block mt-6 pt-4 font-mono text-white bg-gradient-to-r from-zinc-900 to-stone-900 px-6 py-2 rounded-md shadow-md hover:text-amber-700"
+                >Voir le Projet</a
+              >
+              <img src="./assets/img/git.png" alt="" class="mt-6 w-16 h-16" />
+            </div>
+          </div>
+          <!-- Cette div represente une card  CARD2 MODULE DE CONNEXION-->
+
+          <div class="rounded-md shadow-md bg-black">
+            <img
+              src="./assets/img/p2.jpg"
+              class="h-80 w-full object-cover"
+              alt="projet1"
+            />
+            <div class="p-10">
+              <h4 class="font-mono text-white text-2xl">Module de Connexion</h4>
+              <p class="pt-4 text-white">
+                Mise en place d'un module de connexion.<br />
+                Langages utilisé : HTML / CSS / PHP
+              </p>
+
+              <a
+                href="#"
+                class="inline-block mt-6 pt-4 font-mono text-white bg-gradient-to-r from-zinc-900 to-stone-900 px-6 py-2 rounded-md shadow-md hover:text-amber-700"
+                >Voir le Projet</a
+              >
+              <a href=""><img src="./assets/img/git.png" alt="" class="mt-6 w-16 h-16"/></a>
+            </div>
+          </div>
+          <!-- Cette div represente une card  CARD3 LIVRE D'OR-->
+          <div class="rounded-md shadow-md bg-black">
+            <img
+              src="./assets/img/p3.jpg"
+              class="h-80 w-full object-cover"
+              alt="projet1"
+            />
+            <div class="p-10">
+              <h4 class="font-mono text-white text-2xl">Livre d'or</h4>
+              <p class="pt-4 text-white">
+                Création d'un livre d'or.<br />
+                Langages utilisé : HTML / CSS / PHP
+              </p>
+
+              <a
+                href="#"
+                class="inline-block mt-6 pt-4 font-mono text-white bg-gradient-to-r from-zinc-900 to-stone-900 px-6 py-2 rounded-md shadow-md hover:text-amber-700"
+                >Voir le Projet</a
+              >
+              <a href=""
+                ><img src="./assets/img/git.png" alt="" class="mt-6 w-16 h-16"
+              /></a>
+            </div>
+          </div>
+          <!-- Cette div represente une card  CARD4 Reservation de Salle-->
+          <div class="rounded-md shadow-md lg:col-span-2 bg-black">
+            <img
+              src="./assets/img/p8.jpg"
+              class="h-80 w-full object-cover"
+              alt="projet1"
+            />
+            <div class="p-10">
+              <h4 class="font-mono text-white text-2xl">
+                Réservation de Salle
+              </h4>
+              <p class="pt-4 font-mono text-white">
+                Création d'une interface pour une réservation de Salle.<br />
+                Langages utilisé : HTML / CSS / PHP
+              </p>
+
+              <a
+                href="#"
+                class="inline-block mt-6 pt-4 font-mono text-white bg-gradient-to-r from-zinc-900 to-stone-900 px-6 py-2 rounded-md shadow-md hover:text-amber-700"
+                >Voir le Projet</a
+              >
+              <img src="./assets/img/git.png" alt="" class="mt-6 w-16 h-16" />
+            </div>
+          </div>
+          <!-- Cette div represente une card  CARD5 Memory-->
+          <div class="rounded-md shadow-md bg-black">
+            <img
+              src="./assets/img/p5.jpg"
+              class="h-80 w-full object-cover"
+              alt="projet1"
+            />
+            <div class="p-10">
+              <h4 class="font-mono text-white text-2xl">Jeu du Memory</h4>
+              <p class="pt-4 text-white">
+                Création d'un interface pour jeu Memory.<br />
+                Langages utilisé : HTML/ CSS/ PHP
+              </p>
+
+              <a
+                href="#"
+                class="inline-block mt-6 pt-4 font-mono text-white bg-gradient-to-r from-zinc-900 to-stone-900 px-6 py-2 rounded-md shadow-md hover:text-amber-700"
+                >Voir le Projet</a
+              >
+              <img src="./assets/img/git.png" alt="" class="mt-6 w-16 h-16" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="flex flex-col justify-end mt-5 bg-cust pr-5 md:flex-row lg:pt-2"
+    >
+      <h2
+        class="text-white font-mono pl-5 max-sm:text-3xl max-sm:pt-2 sm:text-4xl md:text-4xl lg:text-6xl text-white font-mono"
+      >
+        ME CONTACTER?
+      </h2>
+    </div>
+
+    <!-- Container pour le Contact  -->
+    
+      <div class=" bg-black flex w-full min-h-screen justify-center items-center">
+        <div class=" flex flex-col mt-16 md:flex-row md:space-x-6 space-y-6 md:space-y-0 w-full max-w-4xl p-8 rounded-xl shadow-lg text-white font-mono">
+          <!-- Div pour le contact -->
+            <div class="flex flex-col space-y-8">
+              <div class="mt-10">
+                <h2 class="font-mono sm:text-4xl lg:text-4xl tracking-wide ">MES COORDONNÉES_</h2>
+               
+              </div>
+              
+              <div class="flex flex-col space-y-6">
+                    <div class="inline-flex space-x-2 items-center">
+                        <ion-icon name="call-outline" class="text-lg"></ion-icon>
+                        <span>06.21.94.29.33</span>
+                    </div>
+               
+                  <div class="inline-flex space-x-2 items-center">
+                  <ion-icon name="mail-outline" class="text-lg"></ion-icon>
+                  <span>Mehdi.romdhani@laplateforme.io</span>
+                    </div>
+             
+              </div>
+
+            <!-- Div pour le formulaire -->
+           </div>
+              <div class=" rounded-xl shadow-lg p-8">
+                <form action="" class="flex flex-col space-y-4">
+                  <div>
+                    <label for="Nom" class="text-sm ">Nom</label>
+                  
+                 
+                    <input type="text" placeholder="Votre Nom" class=" ring-1 w-full rounded-md px-4 py-2 mt-2 outline-none text-black focus:ring-2 focus:ring-gray-800">
+                  </div>
+                  <div>
+                    <label for="Nom" class="text-sm">Prenom</label>
+                  
+                  
+                    <input type="text" placeholder="Votre Prenom" class=" ring-1 w-full rounded-md px-4 py-2 mt-2 outline-none text-black focus:ring-2 focus:ring-gray-800">
+                  </div>
+                  <div>
+                    <label for="Nom" class="text-sm">E-mail</label>
+                
+                    <input type="text" placeholder="Votre E-mail" class=" ring-1 w-full rounded-md px-4 py-2 mt-2 outline-none text-black focus:ring-2 focus:ring-gray-800">
+                  </div>
+                  <!-- Pour message  -->
+                  <div>
+                    <label for="Nom" class="text-sm">E-mail</label>
+                
+                    <textarea placeholder="Votre Message"  rows="4" class=" ring-1 w-full rounded-md px-4 py-2 mt-2 outline-none text-black focus:ring-2 focus:ring-gray-800">
+                    </textarea>
+                    <button class="inline-block self-end mt-2 bg-cust text-white font-mono rounded-lg px-6 py-2 uppercase text-sm hover:text-amber-800">Envoyez</button>
+                  
+                </form>
+              </div>
+            </div>
+         </div>
+       </div>
+
+        <!-- Footer -->
+        <div class="bg-cust flex  flex-col w-full justify-center items-center">
+            <i><p class="font-mono text-sm pt-2 max-sm:text-xs">PortFolio_ réalisé avec le FrameWork Taildwind v3</p></i>
+            <p class="max-sm:text-xs">2023</p>
+            
+        </div>
+      
+
+ 
+
+    <script src="./assets/img/script.js"></script>
+
+  </body>
 </html>
